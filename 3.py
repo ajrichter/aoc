@@ -29,6 +29,6 @@ def searchRucksack():
   print("total: " + str(totalPriority))
 
 print(ord('a')-96)
-print(ord('A'.lower())-96)
+print(ord('A')-96)
 # searchRucksack()
 # print(ord('p')-96)
