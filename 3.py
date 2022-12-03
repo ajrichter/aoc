@@ -1,5 +1,7 @@
 def searchRucksack():
-
+    
+    pass;
 
 # searchRucksack()
-print(ord('p')-96)
+# ord() -96
+# print(ord('p')-96)
