@@ -33,7 +33,7 @@ def searchRucksack():
     # add the ord of the letter to total
   print("total: " + str(totalPriority))
 
-print(ord('p'))
-print(ord('A'))
+print(ord('p')-96)
+print(ord('A')-96)
 searchRucksack()
 # print(ord('p')-96)
