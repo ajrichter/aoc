@@ -30,5 +30,5 @@ def searchRucksack():
 
 print(ord('p')-96)
 print(ord('A')-96)
-searchRucksack()
+# searchRucksack()
 # print(ord('p')-96)
