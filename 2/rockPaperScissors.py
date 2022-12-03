@@ -51,11 +51,11 @@ def playRps():
 import requests
 
 
-# playRps()
+playRps()
 # print(ord('z')-96-23)
 # print("2:: " + str(ord('y')-96-23))
 
-URL = "https://adventofcode.com/2022/day/2/input"
-response = requests.get(URL)
-f = open(response, "r")
-print("new: " + f.readline())
+# URL = "https://adventofcode.com/2022/day/2/input"
+# response = requests.get(URL)
+# f = open(response, "r")
+# print("new: " + f.readline())
