@@ -10,7 +10,7 @@ def searchRucksack():
     l = l.strip()
     print(l)
     print(len(l))
-    length = len(l)/2
+    length = int(len(l)/2)
     print(length)
     
     comp1 = l[:length].sort()
