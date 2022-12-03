@@ -11,24 +11,29 @@ def searchRucksack():
     comp1 = sorted(l[:length])
     comp2 = sorted(l[length:])
     found = False
-    letter = '?'
+    letter = ''
     for x in comp1:
       for y in comp2:
         if(x is y):
           letter = x
           print(letter)
-          print(ord(letter)-96)
           found = True
           break
       if(found):
         break
-    totalPriority += ord(letter)-96
+    totalPriority += ord(letter)-38
+    # print(ord(letter)-38)
+    if(letter.islower()):
+      # print("lower: " + str(ord(letter)-96))
+      totalPriority-=58
     
     # add ord() -96 to the total
     # add the ord of the letter to total
   print("total: " + str(totalPriority))
 
-print(ord('a')-96)
-print(96-64)
-# searchRucksack()
-# print(ord('p')-96)
+# print(ord('a')-64-32)
+
+print(ord('A')-38)
+print(ord('L')-64)
+print(ord('P')-64)
+searchRucksack()
