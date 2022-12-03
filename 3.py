@@ -13,8 +13,8 @@ def searchRucksack():
     length = int(len(l)/2)
     print(length)
     
-    comp1 = l[:length].sort()
-    comp2 = l[length:].sort()
+    comp1 = sorted(l[:length])
+    comp2 = sorted(l[length:])
     found = false
     letter = '?'
     for x in comp1:
