@@ -15,7 +15,7 @@ def searchRucksack():
     
     comp1 = sorted(l[:length])
     comp2 = sorted(l[length:])
-    found = false
+    found = False
     letter = '?'
     for x in comp1:
       for y in comp2:
@@ -23,7 +23,7 @@ def searchRucksack():
           letter = '?'
           print(letter)
           print(ord(letter)-96)
-          found = true
+          found = True
           break
       if(found):
         break
