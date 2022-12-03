@@ -7,7 +7,12 @@ def searchRucksack():
   # NJvhJcQWTJWTNTFFMTqqGqfTmB
   totalPriority = 0
   for l in f:
+    l = l.strip()
+    print(l)
+    print(len(l))
     length = len(l)/2
+    print(length)
+    
     comp1 = l[:length].sort()
     comp2 = l[length:].sort()
     found = false
