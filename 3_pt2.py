@@ -4,11 +4,13 @@ def searchRucksack():
 
   # NJvhJcQWTJWTNTFFMTqqGqfTmB
   totalPriority = 0
-  while(1==1):
-    l1 = ''
-    l1 = sorted(f.readline())
-    if(l1 == ''):
-        break
+  
+  l1 = f.readline()
+  counter = 0
+  while(l1 != ''):
+    counter+=1
+    print(counter)
+    l1 = sorted(l1)
     l2 = sorted(f.readline())
     l3 = sorted(f.readline())
 
@@ -35,6 +37,9 @@ def searchRucksack():
     # add ord() -96 to the total
     # add the ord of the letter to total
     print(match2)
+    # get line 1 again
+    l1 = f.readline()
+
 
   print("Sum of Ls: " + str(totalPriority))
 
