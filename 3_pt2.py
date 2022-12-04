@@ -7,11 +7,11 @@ def searchRucksack():
   # NJvhJcQWTJWTNTFFMTqqGqfTmB
   totalPriority = 0
   while(1==1):
-    l1 = f.readline()
+    l1 = sorted(f.readline())
     if(l1 is ''):
         break
-    l2 = f.readline()
-    l3 = f.readline()
+    l2 = sorted(f.readline())
+    l3 = sorted(f.readline())
     
   for l in f:
     length = int(len(l)/2)
