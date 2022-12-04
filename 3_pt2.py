@@ -1,8 +1,6 @@
 def searchRucksack():
   file = "3.in"
   f = open(file, "r")
-
-  # NJvhJcQWTJWTNTFFMTqqGqfTmB
   totalPriority = 0
   
   l1 = f.readline()
@@ -31,7 +29,6 @@ def searchRucksack():
           print("3rd pair: " + m1)
           break
 
-    totalPriority = 0
     for a in match2:
       # print("new letter: " + a)
       totalPriority += ord(a)-38
