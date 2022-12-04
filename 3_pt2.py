@@ -1,5 +1,3 @@
-import requests
-
 def searchRucksack():
   file = "3.in"
   f = open(file, "r")
@@ -9,7 +7,7 @@ def searchRucksack():
   while(1==1):
     l1 = ''
     l1 = sorted(f.readline())
-    if(l1 is ''):
+    if(l1 == ''):
         break
     l2 = sorted(f.readline())
     l3 = sorted(f.readline())
@@ -18,14 +16,14 @@ def searchRucksack():
     for x in l1:
       for y in l2:
         if(x is y):
-          match1.append(x)
+          match1 += x
           print(x)
     
     match2 = ''
     for m1 in match1:
       for m2 in l2:
         if(m1 is m2):
-          match2.append(m1)
+          match2+=m1
           print(m1)
 
     totalPriority = 0
@@ -37,8 +35,9 @@ def searchRucksack():
     # add ord() -96 to the total
     # add the ord of the letter to total
     print(match2)
-    
+
   print("Sum of Ls: " + str(totalPriority))
+
 
 # print(ord('a')-64-32)
 searchRucksack()
