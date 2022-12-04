@@ -12,22 +12,21 @@ def searchRucksack():
         break
     l2 = sorted(f.readline())
     l3 = sorted(f.readline())
-    
-  for l in f:
-    length = int(len(l)/2)
-    comp1 = sorted(l[:length])
-    comp2 = sorted(l[length:])
-    found = False
-    letter = ''
-    for x in comp1:
-      for y in comp2:
+
+    match1 = ''
+    for x in l1:
+      for y in l2:
         if(x is y):
-          letter = x
-          print(letter)
-          found = True
-          break
-      if(found):
-        break
+          match1 += x
+    
+    match2 = ''
+    for m1 in match1:
+      for y in l2:
+        if(x is y):
+          match1 += x
+
+          
+          print(x)
     totalPriority += ord(letter)-38
     # print(ord(letter)-38)
     if(letter.islower()):
