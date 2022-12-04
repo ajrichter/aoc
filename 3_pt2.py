@@ -6,6 +6,13 @@ def searchRucksack():
 
   # NJvhJcQWTJWTNTFFMTqqGqfTmB
   totalPriority = 0
+  while(1==1):
+    l1 = f.readline()
+    if(l1 is ''):
+        break
+    l2 = f.readline()
+    l3 = f.readline()
+    
   for l in f:
     length = int(len(l)/2)
     comp1 = sorted(l[:length])
@@ -32,8 +39,4 @@ def searchRucksack():
   print("total: " + str(totalPriority))
 
 # print(ord('a')-64-32)
-
-print(ord('A')-38)
-print(ord('L')-64)
-print(ord('P')-64)
 searchRucksack()
