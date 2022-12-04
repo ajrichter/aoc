@@ -8,6 +8,7 @@ def getID():
     x = l.split(",")
     a = x[0].split("-")
     b = x[1].split("-")
+    b[1] = b[1].rstrip()
 
     contains = False
     if(a[0] <= b[0] and a[1] >= b[1]):
