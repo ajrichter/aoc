@@ -12,12 +12,12 @@ def getID():
     contains = False
     if(a[0] <= b[0] and a[1] >= b[1]):
       inside+=1
-      print("a: " + a)
-      print("b: " + b)
+      print("a: " + str(a))
+      print("b: " + str(b))
     elif(a[0] >= b[0] and a[1] <= b[1]):
       inside+=1
-      print("a: " + a)
-      print("b: " + b)
+      print("a: " + str(a))
+      print("b: " + str(b))
     
 
   print(inside)
