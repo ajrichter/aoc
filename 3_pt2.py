@@ -8,35 +8,38 @@ def searchRucksack():
   l1 = f.readline()
   counter = 0
   while(l1 != ''):
-    counter+=1
-    print(counter)
+    print("og: " + l1)
     l1 = sorted(l1)
+    print(l1)
+
     l2 = sorted(f.readline())
     l3 = sorted(f.readline())
 
-    match1 = ''
+    mset = set()
     for x in l1:
       for y in l2:
-        if(x is y):
-          match1 += x
-          print(x)
+        if(x == y and x != '\n'):
+          mset.add(x)
+          print("x: " + x + " y: " + y)
+          break
     
     match2 = ''
-    for m1 in match1:
-      for m2 in l2:
-        if(m1 is m2):
+    for m1 in mset:
+      for m2 in l3:
+        if(m1 == m2):
           match2+=m1
-          print(m1)
+          print("3rd pair: " + m1)
+          break
 
     totalPriority = 0
     for a in match2:
-      print("new letter: " + a)
+      # print("new letter: " + a)
       totalPriority += ord(a)-38
       if(a.islower()):
         totalPriority-=58    
     # add ord() -96 to the total
     # add the ord of the letter to total
-    print(match2)
+    print("secondM " + match2)
     # get line 1 again
     l1 = f.readline()
 
