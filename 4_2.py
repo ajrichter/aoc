@@ -10,13 +10,14 @@ def getID():
     b = x[1].split("-")
     b[1] = b[1].rstrip()
 
-    contains = False
-    if(int(a[0]) <= int(b[0]) and int(a[1]) >= int(b[1])):
+    if(int(a[0]) <= int(b[0]) and int(b[0]) <= int(a[1])):
       inside+=1
-      print(str(a) + " > " + str(b))
-    elif(int(a[0]) >= int(b[0]) and int(a[1]) <= int(b[1])):
+    elif(int(a[0]) <= int(b[1]) and int(b[1]) <= int(a[1])):
       inside+=1
-      print(str(a) + " < " + str(b))
+    elif(int(b[0]) <= int(a[0]) and int(a[0]) <= int(b[1])):
+      inside+=1
+    elif(int(b[0]) <= int(a[1]) and int(a[1]) <= int(b[1])):
+      inside+=1
       
 
   print(inside)
