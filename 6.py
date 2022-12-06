@@ -13,7 +13,7 @@ def mc():
         if(len(set) == 4):
             print("4th: " + str(x))
             print(set)
-            index = x
+            index = x+1
             break
         del(set)
 
