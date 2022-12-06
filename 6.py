@@ -3,26 +3,21 @@ def mc():
     # f = open(file, "r")
     data = open(infile).read()
     # str.split(sep=None, maxsplit=-1)
-    arr = data[0].split(sep=None)
+    print(data)
+    print(len(data))
+    arr = list(data)
 
-    index = 
+    index = len(arr)
     for x in range(3, len(arr)):
         set = {arr[x-3], arr[x-2], arr[x-1], arr[x]}
-        if(len(set) == 3):
+        if(len(set) == 4):
+            print("4th: " + str(x))
+            print(set)
+            index = x
+            break
+        del(set)
 
-        curr = arr[x]
-        
-        if()
+    print(index)
 
-
-        
-
-  for x in range(len(lines)):
-    print("clean: " + lines[x].rstrip())
-    # read until char[0] != '['
-    if(lines[x].rstrip() == ''):
-      print("blank is: " + str(x))
-      blank = x
-      break
 
 mc()
