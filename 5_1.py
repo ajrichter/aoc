@@ -1,13 +1,31 @@
-def starSearch():   
+def moveCrates():   
   infile = "5.in"
   # f = open(file, "r")
   data = open(infile).read()
   lines = data.split('\n]')
 
-  for l in lines:
-    print("clean: " + l.rstrip())
+  blank = 0
+
+  for x in range(len(lines)):
+    print("clean: " + lines[x].rstrip())
     # read until char[0] != '['
 
+    if(lines[x].rstrip() == ''):
+      print("blank is: " + str(x))
+      blank = x
+      break
+  
+  # make stacks for break-1 line
+
+  # iterate to until blank line
+  
 
 
-starSearch()
+#     [D]    
+# [N] [C]    
+# [Z] [M] [P]
+#  1   2   3 
+
+
+
+moveCrates()
