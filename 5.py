@@ -16,28 +16,32 @@ def moveCrates():
   # d= {}
   # sorted(d): [1,2,3]
   numL = len(lines[blank-1].split())
-  print("stacks: " + str(numL))
+  print("stacks count: " + str(numL))
 # list = []
 # list.append(list_1)
   stacks = []
   for x in range(numL):
     newL = []
     stacks.append(newL)
+
+  for r in range(blank-2):
+    x = 1
+    line = list(lines[r])
+    print("stackL: " + str(line))
+    for p in range(numL):
+      c = line[x].strip()
+      if(c != ''):
+        stacks[p].append(c)
+      x+=4
+
   # parse this bs as a list
   # [Z] [M] [P]
   #0123456789012
   #  2   6  10
   #x->list->every 4th char->push()->stack
-  # iterate to blank line
-  for r in range(blank-2):
-    x = 2
-    line = list()
-    for p in range(numL):
-      
-  
+  # iterate to blank line      
 #     [D]    
 # [N] [C]    
 # [Z] [M] [P]
 #  1   2   3 
-
 moveCrates()
