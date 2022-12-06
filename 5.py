@@ -36,6 +36,7 @@ def moveCrates():
       x+=4
 
   print(stacks)
+  print(stacks[0].pop())
   # parse this bs as a list
   # [Z] [M] [P]
   #0123456789012
