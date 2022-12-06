@@ -6,7 +6,7 @@ def moveCrates():
 
   blank = 0
   for x in range(len(lines)):
-    print("clean: " + lines[x].rstrip())
+    print("clean:" + lines[x].rstrip())
     # read until char[0] != '['
     if(lines[x].rstrip() == ''):
       print("blank is: " + str(x))
@@ -24,17 +24,13 @@ def moveCrates():
   for x in range(numL):
     newL = []
     stacks.append(newL)
-
   # parse this bs as a list
-  # [N] [C]    
-
+  # [Z] [M] [P]
+  #0123456789012
+  #  2   6  10
+  #x->list->every 4th char->push()->stack
+  # iterate to blank line
   
-  
-
-  # iterate to until blank line
-  
-
-
 #     [D]    
 # [N] [C]    
 # [Z] [M] [P]
