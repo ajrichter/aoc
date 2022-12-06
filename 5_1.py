@@ -16,7 +16,19 @@ def moveCrates():
   #  1   2   3 
   # d= {}
   # sorted(d): [1,2,3]
-  lines[blank-1].split()
+  numL = len(lines[blank-1].split())
+  print("stacks: " + str(numL))
+# list = []
+# list.append(list_1)
+  stacks = []
+  for x in range(numL):
+    newL = []
+    stacks.append(newL)
+
+  # parse this bs as a list
+  # [N] [C]    
+
+  
   
 
   # iterate to until blank line
