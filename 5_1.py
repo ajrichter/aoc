@@ -2,7 +2,7 @@ def moveCrates():
   infile = "5.in"
   # f = open(file, "r")
   data = open(infile).read()
-  lines = data.split('\n]')
+  lines = data.split('\n')
 
   blank = 0
 
