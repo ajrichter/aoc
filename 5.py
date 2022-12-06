@@ -35,6 +35,7 @@ def moveCrates():
         stacks[p].append(c)
       x+=4
 
+  print(stacks)
   # parse this bs as a list
   # [Z] [M] [P]
   #0123456789012
