@@ -24,7 +24,8 @@ def moveCrates():
     newL = []
     stacks.append(newL)
 
-  for r in range(blank-2):
+
+  for r in range(blank-1):
     x = 1
     line = list(lines[r])
     print("stackL: " + str(line))
