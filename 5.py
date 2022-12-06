@@ -26,7 +26,7 @@ def moveCrates():
 
 
   # class range(100, -1, -1)
-  for r in reversed(range(blank-1):
+  for r in reversed(range(blank-1)):
     x = 1
     line = list(lines[r])
     print("stackL: " + str(line))
@@ -36,8 +36,14 @@ def moveCrates():
         stacks[p].append(c)
       x+=4
 
-  print(stacks)
-  print(stacks[0].pop())
+  # print(stacks)
+  # this should be regex for the word 'move'...
+  #move 1 from 2 to 1
+  #012345678901234567
+  #     5     12   17
+  for l in range(blank+1, len(lines)):
+    
+
   # parse this bs as a list
   # [Z] [M] [P]
   #0123456789012
