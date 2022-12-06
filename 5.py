@@ -1,9 +1,8 @@
-def moveCrates():   
+def moveCrates():
   infile = "5.in"
   # f = open(file, "r")
   data = open(infile).read()
   lines = data.split('\n')
-
   blank = 0
   for x in range(len(lines)):
     print("clean:" + lines[x].rstrip())
@@ -12,8 +11,8 @@ def moveCrates():
       print("blank is: " + str(x))
       blank = x
       break
-  # make dict of empty stacks until  stacks for break-1 line
-  #  1   2   3 
+  # make dict of empty stacks until stacks for blank-2 line
+  #  1   2   3
   # d= {}
   # sorted(d): [1,2,3]
   numL = len(lines[blank-1].split())
@@ -30,6 +29,11 @@ def moveCrates():
   #  2   6  10
   #x->list->every 4th char->push()->stack
   # iterate to blank line
+  for r in range(blank-2):
+    x = 2
+    line = list()
+    for p in range(numL):
+      
   
 #     [D]    
 # [N] [C]    
