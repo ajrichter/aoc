@@ -14,7 +14,10 @@ def moveCrates():
       break
   # make dict of empty stacks until  stacks for break-1 line
   #  1   2   3 
-
+  # d= {}
+  # sorted(d): [1,2,3]
+  lines[blank-1].split()
+  
 
   # iterate to until blank line
   
