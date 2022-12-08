@@ -41,6 +41,9 @@ def moveCrates():
   #move 1 from 2 to 1
   #012345678901234567
   #     5     12   17
+  # move = 5
+  from = 12
+  # to = 17 
   for l in range(blank+1, len(lines)):
     
 
@@ -53,5 +56,6 @@ def moveCrates():
 #     [D]    
 # [N] [C]    
 # [Z] [M] [P]
-#  1   2   3 
+#  1   2   3
+
 moveCrates()
