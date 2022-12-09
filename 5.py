@@ -51,6 +51,8 @@ def moveCrates():
     # 0   1   2  3  4 5
     print(lines[l])
     spl = lines[l].split()
+    for s in spl:
+      print("split: " + s)
     cnt = int(spl[1])
     frm = int(spl[3])
     to =  int(spl[5])
