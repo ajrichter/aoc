@@ -54,7 +54,6 @@ def moveCrates():
     cnt = int(spl[1])
     frm = int(spl[3])
     to =  int(spl[5])
-    print("len: " + str(len(stacks)))
     print("cnt: " + str(cnt))
     print("frm: " + str(to))
     print("to: " + str(to))
