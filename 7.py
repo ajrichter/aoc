@@ -3,8 +3,10 @@ def noSpace():
   data = open(infile).read()
   lines = data.split('\n')
   
+    #   add in files
+    # map value to size
 
-  
+
 
 
 
