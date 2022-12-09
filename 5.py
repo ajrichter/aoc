@@ -57,7 +57,7 @@ def moveCrates():
     frm = int(spl[3])
     to =  int(spl[5])
     print("cnt: " + str(cnt))
-    print("frm: " + str(to))
+    print("frm: " + str(frm))
     print("to: " + str(to))
 
     for i in range(cnt):
