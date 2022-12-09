@@ -51,15 +51,13 @@ def moveCrates():
     # 0   1   2  3  4 5
     print(lines[l])
     spl = lines[l].split()
-    for s in spl:
-      print("split: " + s)
     cnt = int(spl[1])
     frm = int(spl[3])
     to =  int(spl[5])
     print("cnt: " + str(cnt))
     print("frm: " + str(frm))
     print("to: " + str(to))
-
+    print("looping: " + str(cnt))
     for i in range(cnt):
       temp = stacks[frm-1].pop()
       print(temp)
