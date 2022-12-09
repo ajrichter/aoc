@@ -56,14 +56,13 @@ def moveCrates():
     to =  int(spl[5])
     print("cnt: " + str(cnt))
     print("frm: " + str(frm))
-    print("to: " + str(to))
-    print("looping: " + str(cnt))
+    print("Stack#: " + str(to))
     print(stacks[to-1])
     for i in range(cnt):
       temp = stacks[frm-1].pop()
       print(temp)
       stacks[to-1].append(temp)
-      
+
     print(stacks[to-1])
 
   print("new stacks::")
