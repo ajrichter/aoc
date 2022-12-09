@@ -39,24 +39,32 @@ def moveCrates():
   for l in range(blank+1, len(lines)):
     #move 1 from 2 to 1
     # 0   1   2  3  4 5
-    print(lines[l])
+    # print(lines[l])
     spl = lines[l].split()
     cnt = int(spl[1])
     frm = int(spl[3])
     to =  int(spl[5])
-    print("move: " + str(cnt))
-    print("frm: " + str(frm))
-    print("Stack#: " + str(to))
-    print(stacks[to-1])
+    # print("move: " + str(cnt))
+    # print("frm: " + str(frm))
+    # print("Stack#: " + str(to))
+    # print(stacks[to-1])
+    tempList = []
     for i in range(cnt):
-      temp = stacks[frm-1].pop()
-      print(temp)
-      stacks[to-1].append(temp)
+      tempList.append(stacks[frm-1].pop())
+    
+    while(len(tempList) > 0):
+      stacks[to-1].append(tempList.pop())
 
-    print(stacks[to-1])
+    # print(stacks[to-1])
 
-  print("new stacks::")
-  print(stacks)
+  print()
+  print("Top of Stacks:")
+  ll = []
+  for s in stacks:
+    ll.append(s.pop())
+
+  print(ll)
+  # print(stacks)
   # parse this bs as a list
   # [Z] [M] [P]
   #0123456789012
