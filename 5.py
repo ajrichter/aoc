@@ -5,10 +5,10 @@ def moveCrates():
   lines = data.split('\n')
   blank = 0
   for x in range(len(lines)):
-    print("clean:" + lines[x].rstrip())
+    # print("clean:" + lines[x].rstrip())
     # read until char[0] != '['
     if(lines[x].rstrip() == ''):
-      print("blank is: " + str(x))
+      # print("blank is: " + str(x))
       blank = x
       break
   # make dict of empty stacks until stacks for blank-2 line
@@ -16,7 +16,7 @@ def moveCrates():
   # d= {}
   # sorted(d): [1,2,3]
   numL = len(lines[blank-1].split())
-  print("stacks count: " + str(numL))
+  # print("stacks count: " + str(numL))
 # list = []
 # list.append(list_1)
   stacks = []
@@ -36,7 +36,9 @@ def moveCrates():
         stacks[p].append(c)
       x+=4
 
-  # print(stacks)
+  print()
+  print("stack::")
+  print(stacks)
   # this should be regex for the word 'move'...
   #move 1 from 2 to 1
   #012345678901234567
@@ -45,8 +47,25 @@ def moveCrates():
   # from = 12
   # to = 17 
   for l in range(blank+1, len(lines)):
-    
+    #move 1 from 2 to 1
+    # 0   1   2  3  4 5
+    spl = lines[l].split()
+    cnt = int(spl[1])
+    frm = int(spl[3])
+    to =  int(spl[5])
+    print("len: " + str(len(stacks)))
+    print("cnt: " + str(cnt))
+    print("frm: " + str(to))
+    print("to: " + str(to))
 
+    for i in range(cnt):
+      print()
+      temp = stacks[frm-1].pop()
+      stacks[to-1].append(temp)
+
+
+  print("new stacks::")
+  print(stacks)
   # parse this bs as a list
   # [Z] [M] [P]
   #0123456789012
