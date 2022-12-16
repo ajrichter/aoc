@@ -28,8 +28,9 @@ def noSpace():
         # iterate through dirs until next $
         temp = i+1
         l_temp = lines[temp]
-        while()
-        if 
+        if l_temp == null:
+          break
+        while(l_temp != ):
 
     elif command == 'd':
 
