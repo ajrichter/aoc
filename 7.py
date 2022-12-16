@@ -3,8 +3,33 @@ def noSpace():
   data = open(infile).read()
   lines = data.split('\n')
 
+  parent_dirs = {}
+  dirs = {}
+  current_dir = '/'
+
+  # $ cd /
+  # 012345
   for l in lines:
+    command = l[0]
+    if command == '$':
+      newCmd = str(l[2:4])
+      print("found cmd: " + newCmd)
+      if newCmd == 'cd':
+        newDir = str(l[5:])
+        if newDir == '..':
+          parent = parent_dirs[current_dir]
+          current_dir = parent
+        else:
+          parent_dirs[newDir] = current_dir
+          current_dir = newDir
+      elif newCmd == 'ls':
+        
+    elif command == 'l':
+
+
+
     
+
     #   add in files
     # map value to size
     # if $ then do x
