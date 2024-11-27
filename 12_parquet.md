@@ -1,1 +1,0 @@
-pd.read_parquet('part1.parquet', engine='fastparquet')
