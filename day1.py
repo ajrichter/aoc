@@ -11,5 +11,5 @@ def read_file(file_path):
 
 # Main program
 if __name__ == "__main__":
-    file_path = "example.txt"  # Replace with your file path
+    file_path = "day1.in"  # Replace with your file path
     read_file(file_path)
