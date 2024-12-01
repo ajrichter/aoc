@@ -21,13 +21,17 @@ def read_file(file_path):
     sum = 0
     list1.sort()
     list2.sort()
-    print(list1)
     for i in range(len(list1)):
         sum = sum + abs(list1[i] - list2[i])
 
     print(sum)
 
-
+    # Part two
+    similar = 0
+    for i in range(len(list1)):
+        count = 0
+        for j in range(len(list2)):
+            if list1[i] == 
 
 # Main program
 if __name__ == "__main__":
