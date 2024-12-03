@@ -22,10 +22,10 @@ def run_code(file_path):
                 isDown = False
                 break
 
+        if(isEqual and (isUp or isDown)):
             sum+=1
 
     print(sum)
-    print(2)
 
 # Main program
 if __name__ == "__main__":
