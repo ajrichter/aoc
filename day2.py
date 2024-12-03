@@ -60,6 +60,7 @@ def runPtTwo(file_path):
                 sum+=1
 
     print(4)
+    # problem dampener - 1 bad level
     # part two
 
 
