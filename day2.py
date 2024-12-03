@@ -1,29 +1,27 @@
-def checkEquals(lines):
-    for x in range(len(lines)-1):
-        if(lines[x] == lines[x+1]):
-            return False
-    return True
-
-def checkIncrease(lines):
-    for x in range(len(lines)-1):
-        if(lines[x] < lines[x]) and lines[x]+3 <= lines[x]:
-            return True
-    return False
-
-def checkDecrease(lines):
-    for x in range(len(lines)-1):
-        if(lines[x] > lines[x]) and lines[x] >= lines[x]+3:
-            return True            
-    return False
-
-def read_file(file_path):
+def run_code(file_path):
     data = open(file_path).read().strip()
     lines = [x.strip() for x in data.split('\n')]
     sum = 0
 
     for line in lines:
         levels = line.split()
-        if (checkEquals(levels) and (checkIncrease(levels) or checkDecrease(levels))):
+        isEqual = True
+        isUp = True
+        isDown = False
+
+        for x in range(len(levels)-1):
+            a = int(levels[x])
+            b = int(levels[x+1])
+            if(a == b):
+                isEqual = False
+                break
+            if((b-a) > 3):
+                isUp = False
+                break
+            if(a-b) > 3:
+                isDown = False
+                break
+
             sum+=1
 
     print(sum)
@@ -32,4 +30,4 @@ def read_file(file_path):
 # Main program
 if __name__ == "__main__":
     file_path = "day2.in"
-    read_file(file_path)
+    run_code(file_path)
