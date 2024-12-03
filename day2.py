@@ -13,10 +13,6 @@ def read_file(file_path):
                     list2.append(int(words[1]))
                 else:
                     print(f"Skipping non-numeric line: {line}")
-    except FileNotFoundError:
-        print(f"Error: File not found - {file_path}")
-    except IOError as e:
-        print(f"Error reading file {file_path}: {e}")
 
     sum = 0
     list1.sort()
@@ -44,6 +40,6 @@ def read_file(file_path):
 
 # Main program
 if __name__ == "__main__":
-    file_path = "day1.in"
+    file_path = "day2.in"
     # file_path = "easy1.txt"
     read_file(file_path)
