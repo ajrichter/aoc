@@ -7,14 +7,14 @@ def checkEquals(lines):
 
 def checkIncrease(lines):
     for x in range(len(lines)-1):
-        if(lines[x] < lines[x]):
-            return False
-    return True
+        if(lines[x] < lines[x]) and lines[x]+3 <= lines[x]:
+            return True
+    return False
 
 def checkDecrease(lines):
     for x in range(len(lines)-1):
-        if(lines[x] < lines[x]):
-            return False
+        if(lines[x] < lines[x]) and lines[x]+3 <= lines[x]:
+            return False            
     return True
 
 def read_file(file_path):
@@ -24,7 +24,7 @@ def read_file(file_path):
 
     for line in lines:
         levels = line.split()
-        if (checkEquals(levels) and checkIncrease(levels) and checkDecrease(levels)):
+        if (checkEquals(levels) and (checkIncrease(levels) or checkDecrease(levels))):
             sum+=1
 
     print(sum)
