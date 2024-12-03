@@ -9,20 +9,20 @@ def checkEquals(levels):
 def checkIncrease(levels):
     if(len(levels) == 1):
         return True
-    a = int(levels.pop(0))
-    b = int(levels.peek(0))
+    a = int(levels[0])
+    b = int(levels[1])
     if ((a < b) and (a >= b-3)):
-        return checkIncrease(levels)
+        return checkIncrease(levels[1:])
     else:
         return False
 
 def checkDecrease(levels):
     if(len(levels) == 1):
         return True
-    a = int(levels.pop(0))
-    b = int(levels.peek(0))
+    a = int(levels[0])
+    b = int(levels[1])
     if ((a > b) and (a-3 <= b)):
-        return checkDecrease(levels)
+        return checkDecrease(levels[1:])
     else:
         return False
 
@@ -30,13 +30,20 @@ def run_code(file_path):
     data = open(file_path).read().strip()
     lines = [x.strip() for x in data.split('\n')]
     sum = 0
+    print(len(lines))
 
     for line in lines:
         levels = line.split()
         if not checkEquals(levels):
+            print("equals:" + str(levels))
             break
-        if(checkIncrease(levels) or checkDecrease(levels)):
+        increase = checkIncrease(levels)
+        dec = checkDecrease(levels)
+        if(increase or dec):
             sum+=1
+            print(levels)
+        else:
+            print("increase: " + str(increase) + " d " + str(dec) + " " + str(levels))
 
     print(sum)
 
