@@ -5,8 +5,8 @@ def run_code(file_path):
 
     for line in lines:
         levels = line.split()
-        isEqual = True
-        isUp = True
+        isEqual = False
+        isUp = False
         isDown = False
 
         for x in range(len(levels)-1):
@@ -15,10 +15,14 @@ def run_code(file_path):
             if(a == b):
                 isEqual = False
                 break
-            if((b-a) > 3):
+            if((b-a) <= 3):
+                isUp = True
+            else:
                 isUp = False
                 break
-            if(a-b) > 3:
+            if(a-b) <= 3:
+                isDown = True
+            else:
                 isDown = False
                 break
 
