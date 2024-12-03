@@ -30,7 +30,6 @@ def run_code(file_path):
     data = open(file_path).read().strip()
     lines = [x.strip() for x in data.split('\n')]
     sum = 0
-    print(len(lines))
 
     for line in lines:
         levels = line.split()
@@ -44,8 +43,23 @@ def run_code(file_path):
             elif decrease:
                 sum+=1
                 # print("^decrease\n")
-    
-    # print(sum)
+
+def runPtTwo(file_path):
+    data = open(file_path).read().strip()
+    lines = [x.strip() for x in data.split('\n')]
+    sum = 0
+
+    for line in lines:
+        levels = line.split()
+        if checkEquals(levels):
+            increase = checkIncrease(levels)
+            decrease = checkDecrease(levels)
+            if increase:
+                sum+=1
+            elif decrease:
+                sum+=1
+
+    print(4)
     # part two
 
 
@@ -53,4 +67,6 @@ def run_code(file_path):
 # Main program
 if __name__ == "__main__":
     file_path = "day2.in"
-    run_code(file_path)
+    file_path = "easy2.in"
+    # run_code(file_path)
+    runPtTwo(file_path)
