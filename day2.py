@@ -36,19 +36,18 @@ def run_code(file_path):
         levels = line.split()
         print(levels)
         if not checkEquals(levels):
-            print("^equals")
-            break
-        increase = checkIncrease(levels)
-        decrease = checkDecrease(levels)
-        if increase:
-            sum+=1
-            print("^increase")
-            break
-        if decrease:
-            sum+=1
-            print("^decrease")
+            print("^equals\n")
         else:
-            print("^fail")
+            increase = checkIncrease(levels)
+            decrease = checkDecrease(levels)
+            if increase:
+                sum+=1
+                print("^increase\n")
+            elif decrease:
+                sum+=1
+                print("^decrease\n")
+            else:
+                print("^fail\n")
 
     print(sum)
 
