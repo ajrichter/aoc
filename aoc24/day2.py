@@ -62,11 +62,11 @@ def runPtTwo(file_path):
         nums = line.split()
         current = checkLevel(nums)
         if current == 0:
-            for x in nums:
-                newList = nums
-                newList.remove(x)
-                current = checkLevel(newList)
+            for x in range(len(nums)):
+                new_list = list(nums[:x] + nums[x+1:])
+                current = checkLevel(new_list)
                 if current == 1:
+                    print(new_list)
                     sum += 1
                     break
         else:
