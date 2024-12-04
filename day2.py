@@ -44,6 +44,17 @@ def run_code(file_path):
                 sum+=1
                 # print("^decrease\n")
 
+def checkLevel(level):
+    sum = 0
+    if checkEquals(levels):
+        increase = checkIncrease(levels)
+        decrease = checkDecrease(levels)
+        if increase:
+            sum+=1
+        elif decrease:
+            sum+=1
+    return sum
+
 def runPtTwo(file_path):
     data = open(file_path).read().strip()
     lines = [x.strip() for x in data.split('\n')]
@@ -51,19 +62,15 @@ def runPtTwo(file_path):
 
     for line in lines:
         levels = line.split()
-        if checkEquals(levels):
-            increase = checkIncrease(levels)
-            decrease = checkDecrease(levels)
-            if increase:
-                sum+=1
-            elif decrease:
-                sum+=1
+        current = checkLevel(levels)
+        if current == 0:
+            for x in levels:
+                current = checkLevel(levels.remove(x))
+                if current == 1:
+                    sum += 1
+                    break
 
-    print(4)
-    # problem dampener - 1 bad level
-    # part two
-
-
+    print(sum)
 
 # Main program
 if __name__ == "__main__":
