@@ -26,23 +26,21 @@ def checkDecrease(levels):
     else:
         return False
 
-def run_code(file_path):
-    data = open(file_path).read().strip()
-    lines = [x.strip() for x in data.split('\n')]
-    sum = 0
+# def run_code(file_path):
+#     data = open(file_path).read().strip()
+#     lines = [x.strip() for x in data.split('\n')]
+#     sum = 0
 
-    for line in lines:
-        levels = line.split()
-        # print(levels)
-        if checkEquals(levels):
-            increase = checkIncrease(levels)
-            decrease = checkDecrease(levels)
-            if increase:
-                sum+=1
-                # print("^increase\n")
-            elif decrease:
-                sum+=1
-                # print("^decrease\n")
+#     for line in lines:
+#         levels = line.split()
+#         if checkEquals(levels):
+#             increase = checkIncrease(levels)
+#             decrease = checkDecrease(levels)
+#             if increase:
+#                 sum+=1
+#             elif decrease:
+#                 sum+=1
+#     print(sum)
 
 def checkLevel(path_one):
     sum = 0
@@ -74,7 +72,7 @@ def runPtTwo(file_path):
 
 # Main program
 if __name__ == "__main__":
-    file_path = "day2.in"
+    # file_path = "day2.in"
     file_path = "easy2.in"
     # run_code(file_path)
     runPtTwo(file_path)
