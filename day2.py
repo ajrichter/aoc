@@ -44,11 +44,11 @@ def run_code(file_path):
                 sum+=1
                 # print("^decrease\n")
 
-def checkLevel(level):
+def checkLevel(path_one):
     sum = 0
-    if checkEquals(levels):
-        increase = checkIncrease(levels)
-        decrease = checkDecrease(levels)
+    if checkEquals(path_one):
+        increase = checkIncrease(path_one)
+        decrease = checkDecrease(path_one)
         if increase:
             sum+=1
         elif decrease:
@@ -61,11 +61,11 @@ def runPtTwo(file_path):
     sum = 0
 
     for line in lines:
-        levels = line.split()
-        current = checkLevel(levels)
+        nums = line.split()
+        current = checkLevel(nums)
         if current == 0:
-            for x in levels:
-                current = checkLevel(levels.remove(x))
+            for x in nums:
+                current = checkLevel(nums.remove(x))
                 if current == 1:
                     sum += 1
                     break
