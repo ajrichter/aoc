@@ -8,8 +8,6 @@ def runOne(file_path):
     
     
 
-
-
 if __name__ == "__main__":
     file_path = "day4.in"
     runOne(file_path)
