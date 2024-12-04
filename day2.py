@@ -1,28 +1,28 @@
-def checkEquals(levels):
-    for x in range(len(levels)-1):
-        a = int(levels[x])
-        b = int(levels[x+1])
+def checkEquals(equalList):
+    for x in range(len(equalList)-1):
+        a = int(equalList[x])
+        b = int(equalList[x+1])
         if(a == b):
             return False
     return True
 
-def checkIncrease(levels):
-    if(len(levels) == 1):
+def checkIncrease(upList):
+    if(len(upList) == 1):
         return True
-    a = int(levels[0])
-    b = int(levels[1])
+    a = int(upList[0])
+    b = int(upList[1])
     if ((a < b) and (a >= b-3)):
-        return checkIncrease(levels[1:])
+        return checkIncrease(upList[1:])
     else:
         return False
 
-def checkDecrease(levels):
-    if(len(levels) == 1):
+def checkDecrease(downList):
+    if(len(downList) == 1):
         return True
-    a = int(levels[0])
-    b = int(levels[1])
+    a = int(downList[0])
+    b = int(downList[1])
     if ((a > b) and (a-3 <= b)):
-        return checkDecrease(levels[1:])
+        return checkDecrease(downList[1:])
     else:
         return False
 
@@ -63,16 +63,19 @@ def runPtTwo(file_path):
         current = checkLevel(nums)
         if current == 0:
             for x in nums:
-                current = checkLevel(nums.remove(x))
+                newList = nums
+                newList.remove(x)
+                current = checkLevel(newList)
                 if current == 1:
                     sum += 1
                     break
+        else:
+            sum+=1
 
     print(sum)
 
-# Main program
 if __name__ == "__main__":
-    # file_path = "day2.in"
-    file_path = "easy2.in"
+    file_path = "day2.in"
+    # file_path = "easy2.in"
     # run_code(file_path)
     runPtTwo(file_path)
