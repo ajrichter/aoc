@@ -13,7 +13,9 @@ def multiply(file_path):
 
 def mulTwo(file_path):
     pattern = r"mul\(\d+,\d+\)"
-    
+    off_patterm = r"don't\(\)"
+    on =  r"do\(\)"
+
     sum = 0
     data = open(file_path).read().strip()    
     matches = re.findall(pattern, data)
