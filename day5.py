@@ -13,7 +13,6 @@ def run(file_path):
         else:
             rules[rule[0]] = set([rule[1]])
         
-    print(rules)
     # if line is in o
     # if line is correct, add middle page
     # 88
