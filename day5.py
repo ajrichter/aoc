@@ -1,26 +1,23 @@
-def findM(array_2d, row, col, letters):
-    letter = letters.get(0)
-
-
-def runOne(file_path):
+def run(file_path):
     data = open(file_path).read().strip()
-    # convert all lines to a [][] array
-    array_2d = [list(line.strip()) for line in data]
-    # do graph search for XMAS
-    # add visited to check nearby?
-    for row in array_2d:
-        for col in row:
-            if array_2d[row][col] == 'X':
-                # check the rest
-                findLetter(array_2d, row, col, 'MAS')
+    lines = [x.strip() for x in data.split('\n')]
+    # read all rules into a dictionary
+    rules = {}
 
-
+    for line in lines:
+        if line == '':
+            break
+        rule = line.split("|")
+        if rule[0] in rules:
+            rules.get(rule[0]).add(rule[1])
+        else:
+            rules[rule[0]] = set([rule[1]])
+        
+    print(rules)
+    # if line is in o
+    # if line is correct, add middle page
+    # 88
+        
 if __name__ == "__main__":
-    file_path = "day4.in"
-    runOne(file_path)
-
-
-# split
-# if line is in o
-# if line is correct, add middle page
-# 88
+    file_path = "day5.in"
+    run(file_path)
