@@ -15,7 +15,7 @@ def run(file_path):
         
     # if line is in o
     # if line is correct, add middle page
-    # 88
+    # 143 - middle pages of 3
         
 if __name__ == "__main__":
     file_path = "day5.in"
