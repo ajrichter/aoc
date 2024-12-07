@@ -18,3 +18,9 @@ def runOne(file_path):
 if __name__ == "__main__":
     file_path = "day4.in"
     runOne(file_path)
+
+
+# split
+# if line is in o
+# if line is correct, add middle page
+# 88
